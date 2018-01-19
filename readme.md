@@ -4,7 +4,7 @@ Deploy Mova application
 
 ## Installation
 
-Configure .env file to define database connection
+Configure .env file to define database connection - Change APP_ENV=production to APP_ENV=dev . After migration, set this value to production
 
 Run composer to install dependencies
 ```shell
