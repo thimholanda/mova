@@ -1,0 +1,3070 @@
+@import "fonts"
+@import "normalize"
+@import "main"
+@import "mymixins"
+@import "myvars"
+@import "animate"
+@import "font-awesome"
+@import "bootstrap"
+@import "slick"
+@import "featherlight"
+@import "animate"
+
+section
+	width: 100%
+	height: auto
+	float: left
+	position: relative
+	text-align: center
+
+header
+	h1
+		cursor: pointer
+
+.zb-content
+	display: inline-block
+	width: 90%
+	text-align: left
+
+
+.zb-h1-blue
+	font-family: 'Open Sans'
+	font-weight: 700
+	font-size: 9rem
+	line-height: 9rem
+	color: $blue
+	letter-spacing: -.5rem
+	margin: 0px
+	margin-left: -8px
+
+.zb-featured-text
+	font-size: 2rem
+	line-height: 2.6rem
+	margin-bottom: 40px
+
+p
+	font-family: 'Open Sans'
+	font-size: 1.6rem
+	line-height: 2.2rem
+	color: black
+	text-align: justify
+
+.zb-box-container
+	width: 100%
+	height: auto
+	overflow: hidden
+	display: inline-block
+	vertical-align: top
+	padding: 20px
+	margin-top: 30px
+
+.zb-box-container-gray
+	background: $gray
+
+.zb-box-container-blue
+	background: $blue
+
+.zb-regular-button
+	width: 100%
+	height: 30px
+	background: $heavy-blue
+	font-size: 2rem
+	color: white
+	font-style: italic
+	height: 50px
+	border: 5px solid $dark-blue
+	transition: all .3s
+
+	&:hover
+		background: $dark-blue
+		border: 5px solid rgba(white, .5)
+		
+
+.zb-ver-como
+	color: white
+	text-decoration: underline
+	transition: all .2s
+
+	i
+		margin-left: 5px
+
+	&:hover
+		color: black
+
+
+.slick-slide
+    outline: none !important
+
+
+.zb-wrap-result
+	display: none
+
+	.zb-container-checkbox
+		width: 23px
+		height: 23px
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		margin-right: 5px
+
+	.zb-row-container-checkbox
+
+		text-align: center
+
+		p
+			margin: 0
+			display: inline-block
+			vertical-align: middle
+
+			a
+				color: white
+				font-weight: 400
+				text-decoration: underline
+		
+
+		input[type="checkbox"]
+			width: 100%
+			height: 100%
+			display: block
+			cursor: pointer
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 1
+			margin: 0
+			opacity: 0
+
+		label
+			width: 100%
+			height: 100%
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			border-radius: 4px
+			font-size: 2rem
+			color: black
+			border: 2px solid white
+			transition: all .2s
+			background: rgba(white, .2)
+
+		input[type="checkbox"]:checked + label
+			background: white
+			text-align: center
+
+			&:after
+				content: '✔'
+				color: $blue
+				font-size: 1.5rem
+				line-height: 0
+				margin: 0
+				position: absolute
+				left: 50%
+				top: 50%
+				@include translate()
+
+[data-animation-in]
+	opacity: 0
+
+.zb-image-slider
+	width: 100%
+	height: 100%
+	background: red
+	position: absolute
+	top: 0
+	left: 0
+	-webkit-transform: translate3d(0, 0, 0)
+	-moz-transform: translate3d(0, 0, 0)
+	-ms-transform: translate3d(0, 0, 0)
+	transform: translate3d(0, 0, 0)
+
+.zb-slide-eolica
+	.zb-image-slider
+		background: url('../img/ziit-eolica-1.jpg') no-repeat center
+		background-size: cover
+
+.zb-slide-biomassa
+	.zb-image-slider
+		background: url('../img/ziit-biomassa-1.jpg') no-repeat center
+		background-size: cover
+
+.zb-slide-hidrica
+	.zb-image-slider
+		background: url('../img/ziit-hidrica-1.jpg') no-repeat center
+		background-size: cover
+
+.zb-slide-solar
+	.zb-image-slider
+		background: url('../img/ziit-solar-1.jpg') no-repeat center
+		background-size: cover
+
+
+
+.zb-main-header, .zb-second-header, .zb-suport-header
+	width: 100%
+	height: 100px
+	overflow: hidden
+	float: left
+	position: absolute
+	z-index: 999
+	top: 0
+	left: 0
+
+	h1
+		width: 272px
+		height: 63px
+		background: url('../img/ziit-business.svg') no-repeat center
+		display: block
+		margin: 0
+		position: absolute
+		top: 50%
+		left: 20px
+		@include translate-y()
+
+		& > span
+			text-indent: -9999px
+			display: inline-block
+
+	nav
+		display: inline-block
+		vertical-align: top
+		position: absolute
+		right: 20px
+		top: 30%
+		@include translate-y() 
+
+		ul
+			list-style: none
+			display: inline-block
+			vertical-align: top
+			margin: 0
+
+			li
+				display: inline-block
+				vertical-align: middle
+				padding-top: 3px
+
+				& + li
+					margin-left: 20px
+
+				a
+					display: inline-block
+					vertical-align: top
+					color: white
+					font-family: 'Open Sans'
+					font-weight: 700
+					font-size: 1.5rem
+					transition: all .2s
+
+					&:hover
+						color: white
+						text-decoration: none
+						opacity: .7
+
+			.login
+				background: white
+				font-weight: 400
+				font-style: italic
+				color: $gray
+				padding: 3px 40px
+
+				&:hover
+					color: $gray
+
+.zb-second-header, .zb-suport-header
+	background: $gray
+	width: 100%
+	height: 70px
+	position: fixed
+	left: 0
+	top: -70px
+	z-index: 9999
+	transition: all .2s
+
+	h1
+		background: url('../img/ziit-business-icon.svg') no-repeat center
+		width: 100px
+
+	nav
+		top: 50%
+
+.zb-suport-header
+	top: 0px
+
+.zb-second-header-active
+	top: 0
+
+.zb-container-btn-simulacao
+	position: absolute
+	right: 5%
+	bottom: 80px
+	z-index: 99999
+
+	p
+		color: white
+		font-size: 1.7rem
+		text-align: center
+
+	button
+		box-sizing: border-box
+		width: 100%
+		background: $gray
+		color: white
+		font-family: 'Open Sans'
+		text-transform: uppercase
+		font-style: italic
+		font-size: 2.8rem
+		padding: 5px 15px
+		border: 8px solid rgba(#bbbbbb, .1)
+		transition: all .4s
+
+		&:hover
+			background: white
+			color: $gray
+			border: 8px solid rgba($gray, .5)
+
+.zb-container-main-slider
+	width: 100%
+	height: 100vh
+	position: relative
+	text-align: left
+	-webkit-transform: translate3d(0, 0, 0)
+	-moz-transform: translate3d(0, 0, 0)
+	-ms-transform: translate3d(0, 0, 0)
+	transform: translate3d(0, 0, 0)
+
+	.zb-slide
+		position: relative
+		width: 100%
+		height: 100%
+
+		.zb-container-content
+			position: absolute
+			display: block
+			top: 55%
+			@include translate-y()
+			left: 70px
+			width: 450px
+			z-index: 1000
+
+			h1			
+				font-family: 'Open Sans'
+				font-weight: 700
+				font-size: 8rem
+				line-height: 7.5rem
+				color: white
+				letter-spacing: -.4rem
+
+				span
+					border-bottom: 2px solid white
+					padding-bottom: 10px
+					display: inline-block
+
+			h2
+				font-size: 2rem
+				line-height: 2.4rem
+				color: white
+				padding-right: 120px
+				font-family: 'Open Sans'
+				margin-top: 40px
+
+		.zb-slider-mask-eolica
+			background: url('../img/ziit-eolica.svg') no-repeat center
+
+		.zb-slider-mask-hidrica
+			background: url('../img/ziit-hidrica.svg') no-repeat center
+
+		.zb-slider-mask-solar
+			background: url('../img/ziit-solar.svg') no-repeat center
+
+		.zb-slider-mask-biomassa
+			background: url('../img/ziit-biomassa.svg') no-repeat center
+
+		.zb-slider-mask
+			width: 100%
+			height: 100vh
+			position: relative
+			background-size: cover
+			z-index: 1
+
+		.zb-slider-icon-eolica
+			background: url('../img/ziit-eolica-icon.svg') no-repeat center
+
+		.zb-slider-icon-hidrica
+			background: url('../img/ziit-hidrica-icon.svg') no-repeat center
+
+		.zb-slider-icon-solar
+			background: url('../img/ziit-solar-icon.svg') no-repeat center
+
+		.zb-slider-icon-biomassa
+			background: url('../img/ziit-biomassa-icon.svg') no-repeat center
+
+		.zb-slider-icon
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+			background-size: cover
+			z-index: 1
+			display: block
+
+	.zb-slide-eolica
+		background: url('../img/ziit-eolica-2.jpg') no-repeat center
+		background-size: cover
+
+	.zb-slide-biomassa
+		background: url('../img/ziit-biomassa-2.jpg') no-repeat center
+		background-size: cover
+
+	.zb-slide-hidrica
+		background: url('../img/ziit-hidrica-2.jpg') no-repeat center
+		background-size: cover
+
+
+	.zb-slide-solar
+		background: url('../img/ziit-solar-2.jpg') no-repeat center
+		background-size: cover
+
+
+	.slick-dots
+		bottom: 30px
+		left: 0
+		margin: 0
+		position: absolute
+		width: 100%
+		text-align: center
+
+		li
+			width: 18px
+			height: 18px
+			background: rgba(#bbbbbb, .5)
+			border: 2px solid rgba(white, .8)
+			display: inline-block
+			cursor: pointer
+			border-radius: 100%
+			margin: 0 4px
+
+			button
+				display: none
+
+		li.slick-active
+			background: rgba($gray, .8)
+
+
+.zb-section-como-funciona
+	padding-top: 140px
+	text-align: left
+
+	h1
+		font-family: 'Open Sans'
+		font-weight: 700
+		font-size: 10rem
+		line-height: 8.5rem
+		color: $green
+		letter-spacing: -.4rem
+		margin: 0
+		display: block
+		width: 100%
+		float: right
+		padding-left: 5%
+
+
+	.zb-text-container
+		background: $green
+		width: 95%
+		position: relative
+		display: inline-block
+		float: right
+		margin-top: -5px
+		padding: 40px 0 50px 40px
+
+		p
+			width: 60%
+
+	img
+		width: 440px
+		position: absolute
+		bottom: 0
+		right: 5%
+
+	.zb-selo-energia-renovavel
+		width: 340px
+		height: 137px
+		background: url('../img/selo-empresa-renovavel.svg') center no-repeat
+		background-size: 100%
+		position: absolute
+		right: 10%
+		top: 120px
+
+
+.zb-section-formas-aderir
+	padding-top: 100px
+	font-family: 'Open Sans'
+	overflow: hidden
+
+	.zb-box-container-gray
+		margin-top: 10px
+
+	h2
+		font-size: 1.68rem
+		background: $blue
+		color: white
+		padding: 20px 20px
+		margin: 0px
+		margin-top: -10px
+
+	.zb-box-container
+		font-size: 0
+
+		.zb-container-beneficios
+			display: inline-block
+			vertical-align: top
+			font-size: 1.6rem
+			line-height: 2rem
+			width: 44%
+			color: white
+
+			h3
+				margin: 45px 0 0 0
+				font-weight: 700
+				font-style: italic
+				font-size: 2.8rem
+				letter-spacing: -.1rem
+				margin-bottom: 20px
+
+			ul
+				list-style: none
+				padding-top: 38px
+
+				li
+					height: 70px
+					position: relative
+
+					+ li
+						border-top: 1px solid white
+
+					.zb-list-align
+						position: absolute
+						top: 50%
+						@include translate-y()
+
+					.zb-veja-aqui
+						font-size: 1.4rem
+						font-weight: 700
+						text-decoration: underline
+						color: white
+						transition: all .2s
+
+						&:hover
+							color: $blue
+
+		.zb-container-list-beneficios
+			width: 26%
+			display: inline-block
+			vertical-align: top
+			background: $light-gray
+			font-size: 1.6rem
+			margin-left: 2%
+			min-height: 350px
+			text-align: center
+			padding: 10px
+
+			h3
+				margin: 0 
+				font-weight: 400
+				font-style: italic
+				font-size: 2rem
+				letter-spacing: -.1rem
+				margin-bottom: 20px
+				color: white
+
+			ul
+				list-style: none
+				margin-top: -9px
+
+				li
+					height: 70px
+					position: relative
+					
+					+ li
+						border-top: 1px solid white
+
+					.zb-icon-beneficios
+						width: 60px
+						height: 33px
+						background: gray
+						display: block
+						position: absolute
+						top: 50%
+						left: 50%
+						@include translate()
+
+					.zb-icon-no
+						background: url('../img/icon-no.svg') no-repeat center
+						background-size: 100%
+
+					.zb-icon-yes
+						background: url('../img/icon-yes.svg') no-repeat center
+						background-size: 100%
+
+
+			button
+				width: 100%
+				padding: 5px
+				color: white
+				background: $gray
+				font-size: 2.1rem
+				font-style: italic
+				transition: all .4s
+				border: 2px solid rgba(white, .5)
+
+				&:hover
+					background: rgba($gray, .5)
+
+.zb-section-numeros
+	padding-top: 100px
+	font-family: 'Open Sans'
+	overflow: hidden
+
+	.zb-box-container
+		margin-top: -10px
+		font-size: 0
+		color: white
+		padding: 30px 20px
+
+		.zb-container-form
+			width: 52%
+			display: inline-block
+			vertical-align: top
+			font-size: 1.6rem
+
+			.row
+				width: 100%
+				display: inline-block
+				margin: 0
+				margin-bottom: 20px
+
+			label
+				font-weight: 400
+				margin-bottom: 10px
+
+			input
+				width: 100%
+				background: white
+				padding: 7px 4px
+				color: black
+				font-weight: 700
+				font-style: italic
+				text-transform: uppercase
+
+				& + input
+					margin-top: 10px
+
+			::-webkit-input-placeholder
+			  color: black
+			  font-weight: 700
+			  font-style: italic
+			  text-transform: none
+			
+			::-moz-placeholder
+			  color: black
+			  font-weight: 700
+			  font-style: italic
+			  text-transform: none
+			
+			:-ms-input-placeholder
+			  color: black
+			  font-weight: 700
+			  font-style: italic
+			  text-transform: none
+			
+			:-moz-placeholder
+			  color: black
+			  font-weight: 700
+			  font-style: italic
+			  text-transform: none
+
+
+	 	.zb-investimento
+	 		width: 100%
+	 		padding: 7px 4px
+	 		display: inline-block
+	 		vertical-align: top
+	 		background: white
+	 		color: black
+	 		font-weight: 700
+	 		font-style: italic
+	 		text-transform: uppercase
+
+	 		strong
+	 			font-size: 2.5rem
+
+	 	.zb-row-investimento
+	 		margin-top: 20px
+				
+
+		.zb-container-slider
+			width: 46%
+			height: auto
+			overflow: hidden
+			display: inline-block
+			vertical-align: top
+			margin-left: 2%
+			position: relative
+
+			div
+				position: relative
+
+			span
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 100%
+				height: 100px
+				padding-top: 10px
+				background: rgba(black, .8)
+				font-size: 1.7rem
+				color: white
+				display: block
+				text-align: center
+
+			img
+				width: 100%
+				border: none
+				outline: none
+				display: block
+
+			a
+				display: block
+				border: none
+				outline: none
+
+
+
+		.slick-dots
+			bottom: 30px
+			left: 0
+			margin: 0
+			position: absolute
+			width: 100%
+			text-align: center
+
+			li
+				width: 18px
+				height: 18px
+				background: rgba(#bbbbbb, .5)
+				border: 2px solid rgba(white, .8)
+				display: inline-block
+				cursor: pointer
+				border-radius: 100%
+				margin: 0 4px
+
+			li.slick-active
+				background: $blue
+
+
+.zb-section-motivos
+	padding-top: 100px
+	text-align: left
+
+	h1
+		font-family: 'Open Sans'
+		font-weight: 700
+		font-size: 10rem
+		line-height: 8.5rem
+		color: $red
+		letter-spacing: -.4rem
+		margin: 0
+		display: block
+		width: 100%
+		float: right
+		padding-left: 5%
+
+
+	.zb-text-container
+		background: $red
+		width: 95%
+		position: relative
+		display: inline-block
+		float: right
+		margin-top: -5px
+		padding: 40px 0 50px 40px
+
+		p
+			width: 60%
+			color: white
+
+	img
+		width: 540px
+		position: absolute
+		bottom: 0
+		right: 5%
+
+
+.zb-section-energias
+	background: $gray
+	padding-top: 90px
+	height: 100vh
+	font-family: 'Open Sans'
+	margin-top: 140px
+
+	.zb-content
+		max-width: 1200px
+		position: relative
+		height: 100%
+
+	h1
+		color: white
+		font-weight: 700
+		letter-spacing: -.2rem
+		font-size: 7rem
+		line-height: 6rem
+
+	.zb-menu-energias
+		display: block
+		width: 100%
+		position: absolute
+		top: 35%
+
+		ul
+			list-style: none
+			vertical-align: top
+			margin: 0
+			font-size: 0.1px
+			text-align: justify
+
+			&:after
+				content: ''
+				width: 100%
+				display: inline-block
+
+
+			li
+				width: 200px
+				height: 200px
+				display: inline-block
+				vertical-align: top
+
+				&:hover
+					-webkit-animation: 1s swing
+
+				button
+					display: block
+					width: 100%
+					height: 100%
+					background-size: 400%
+					background-repeat: no-repeat
+					border-radius: 100%
+					transition: all .2s
+
+					&:hover
+						background-color: rgba(white, .2)
+
+				.zb-button-eolica
+					background-image: url('../img/sprite-energias.svg')  
+					background-position: 0 center
+
+				.zb-button-biomassa
+					background-image: url('../img/sprite-energias.svg')  
+					background-position: -200px center
+
+				.zb-button-hidrica
+					background-image: url('../img/sprite-energias.svg')  
+					background-position: -400px center
+
+				.zb-button-solar
+					background-image: url('../img/sprite-energias.svg')  
+					background-position: -600px center
+
+	.zb-main-text
+		color: white
+		width: 44%
+		position: absolute
+		right: 0
+		top: 76%
+
+
+	.zb-slider-energia
+		width: 100%
+		height: 100vh
+		position: absolute
+		z-index: 1
+		top: 0
+		left: 0
+		padding-top: 30px
+		text-align: center
+		display: none
+
+		.zb-content
+			max-width: 1200px
+			position: relative
+			height: 100%
+		h1
+			color: white
+			font-weight: 700
+			letter-spacing: -.2rem
+			font-size: 7rem
+			line-height: 6rem
+
+		.zb-icon-energia
+			width: 200px
+			height: 200px
+			display: inline-block
+			border-radius: 100%
+			background-size: 400%
+			background-repeat: no-repeat
+			margin: 20px 0
+
+		.zb-inline-text
+			color: white
+			width: 40%
+			line-height: 1.8rem
+
+		.zb-regular-inline-button
+			color: white
+			text-decoration: underline
+			font-style: italic
+			font-size: 1.6rem
+			margin-top: 20px
+			transition: all .2s
+			
+			&:hover
+				color: $gray
+
+		.zb-wrap-infos
+			position: absolute
+			display: inline-block
+			top: 50%
+			left: 0
+			@include translate-y()
+
+		.zb-button-voltar
+			width: 60px
+			height: 60px
+			background: url('../img/btn-voltar.svg') no-repeat center
+			position: absolute
+			right: 55%
+			top: 40px
+			transition: all .2s
+
+			&:hover
+				opacity: .7
+
+			span
+				color: white
+				font-weight: 700
+				font-style: italic
+				position: absolute
+				left: 50%
+				@include translate-x()
+				top: -22px
+
+		.zb-map-container
+			width: 50%
+			height: 100%
+			background: gray
+			position: absolute
+			right: 0
+			top: 0
+
+		.zb-icon-energia
+			background-image: url('../img/sprite-energias.svg')
+
+
+.zb-section-clientes
+
+	padding-top: 140px
+	font-family: 'Open Sans'
+
+	h1
+		color: white
+		font-weight: 700
+		letter-spacing: -.2rem
+		font-size: 8rem
+		line-height: 6rem
+		margin: 0px
+		margin-bottom: 20px
+
+	.zb-stripe
+		background: $light-green
+		height: 200px
+		width: 100%
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+
+	.zb-slider-clientes
+		width: 100%
+		font-size: 0
+		position: relative
+
+		.zb-single-slide-cliente
+			display: block
+			font-size: 5rem
+			font-weight: 700
+			font-style: italic
+			letter-spacing: -.2rem
+			text-align: center
+			padding: 50px 0
+
+	.slick-arrow
+		width: 30px
+		height: 30px
+		position: absolute
+		top: 50%
+		@include translate-y()
+		z-index: 1
+
+	.slick-prev
+		left: 0
+		
+		&:after
+			content: '<'
+			font-size: 3rem
+			line-height: 30px
+			font-weight: 700
+			font-style: italic
+
+	.slick-next
+		right: 0
+
+		&:after
+			content: '>'
+			font-size: 3rem
+			line-height: 30px
+			font-weight: 700
+			font-style: italic
+
+	.zb-watts
+		width: 100%
+		background: $light-green
+		font-size: 0
+		padding: 20px 0
+
+		.zb-half-content
+			font-size: 1.8rem
+			width: 50%
+			display: inline-block
+			padding: 20px
+			vertical-align: top
+			position: relative
+
+			.zb-wrap-text
+				display: inline-block
+				position: relative
+				left: 50%
+				margin-top: 10px
+				@include translate-x()
+
+			.zb-full-wrap-text
+				width: 100%
+
+				.zb-featured-text
+					display: block
+					width: 100%
+					text-align: center
+					font-size: 5rem
+					line-height: 3.8rem
+					font-style: italic
+					margin: 0
+
+					span
+						font-size: 3rem
+						font-weight: 700
+
+.zb-section-faq
+	padding-top: 140px
+	font-family: 'Open Sans'
+	margin-bottom: 140px
+
+	h1
+		width: 90%
+		display: inline-block
+		text-align: left
+		line-height: 0
+		font-size: 7rem
+		margin-left: -12px
+		color: $gray
+		position: relative
+		z-index: 1
+
+	.zb-content
+		background: $gray
+		padding: 10px 20px
+		margin-top: -6px
+
+		.zb-resposta
+			display: none
+
+		h2
+			font-size: 1.7rem
+			background: $green
+			padding: 10px 10px
+			font-weight: 700
+			cursor: pointer
+			transition: all .2s
+			position: relative
+			padding-right: 40px
+
+			&:hover
+				opacity: .8
+
+			p
+				color: $gray
+				margin: 0
+
+			.zb-accordion-icon
+				font-size: 2rem
+				display: block
+				position: absolute
+				right: 10px
+				top: 50%
+				@include translate-y()
+
+		p
+			color: white
+			padding: 0 10px
+			line-height: 2rem
+
+		iframe
+			display: block
+			margin: 20px auto 0 auto
+			max-width: 560px
+
+
+
+footer
+	width: 100%
+	height: auto
+	float: left
+	position: relative
+	text-align: center
+	font-family: 'Open Sans'
+	padding-top: 30px
+	padding-bottom: 30px
+
+	.zb-content
+		font-size: 0
+
+		.zb-wrap-content-third
+			display: inline-block
+			font-size: 2rem
+			width: 33%
+			vertical-align: bottom
+
+			ul
+				list-style: none
+				margin: 0
+
+				li
+					line-height: 2.5rem
+
+					a
+						font-size: 1.5rem
+						line-height: 1.5rem
+						color: black
+
+						&:hover
+							opacity: .7
+							text-decoration: none
+
+			.zb-email
+				font-size: 1.7rem
+				color: black
+
+			h1
+				width: 100%
+				height: 70px
+				background: white url('../img/ziit-business-black.svg') no-repeat left center
+
+				span
+					display: inline-block
+					text-indent: -9999px
+
+
+.zb-pano-modal
+	width: 100%
+	height: 100%
+	position: fixed
+	top: 0
+	left: 0
+	background: rgba(black, .8)
+	z-index: 300000
+	display: none
+
+.zb-modal, .zb-modal-premium
+	width: 90%
+	max-width: 550px
+	background: $blue
+	position: fixed
+	top: 50%
+	left: 50%
+	@include translate()
+	z-index: 300001
+	font-family: 'Open Sans'
+	border: 10px solid white
+	display: none
+
+	form
+		padding: 20px
+		color: white
+
+		h1
+			margin: 0
+			margin-bottom: 20px
+			font-weight: 700
+
+		label
+			font-weight: 400
+			font-size: 1.8rem
+			line-height: 2.2rem
+			margin-bottom: 10px
+
+		input
+			height: 40px
+			background: white
+			width: 100%
+			padding: 0 10px
+			color: black
+			font-weight: 700
+			font-style: italic
+			text-transform: uppercase
+
+			& + input
+				margin-top: 10px
+
+		.zb-container-checkbox
+			width: 23px
+			height: 23px
+			position: relative
+			display: inline-block
+			vertical-align: middle
+			margin-right: 5px
+
+		.zb-row-container-checkbox
+
+			text-align: center
+
+			p
+				margin: 0
+				display: inline-block
+				vertical-align: middle
+
+				a
+					color: white
+					font-weight: 400
+					text-decoration: underline
+			
+
+			input[type="checkbox"]
+				width: 100%
+				height: 100%
+				display: block
+				cursor: pointer
+				position: absolute
+				top: 0
+				left: 0
+				z-index: 1
+				margin: 0
+				opacity: 0
+
+			label
+				width: 100%
+				height: 100%
+				display: block
+				position: absolute
+				top: 0
+				left: 0
+				border-radius: 4px
+				font-size: 2rem
+				color: black
+				border: 2px solid white
+				transition: all .2s
+				background: rgba(white, .2)
+
+			input[type="checkbox"]:checked + label
+				background: white
+				text-align: center
+
+				&:after
+					content: '✔'
+					color: $blue
+					font-size: 1.5rem
+					line-height: 0
+					margin: 0
+					position: absolute
+					left: 50%
+					top: 50%
+					@include translate()
+
+
+
+		::-webkit-input-placeholder
+		  color: black
+		  font-weight: 700
+		  font-style: italic
+		  text-transform: none
+		
+		::-moz-placeholder
+		  color: black
+		  font-weight: 700
+		  font-style: italic
+		  text-transform: none
+		
+		:-ms-input-placeholder
+		  color: black
+		  font-weight: 700
+		  font-style: italic
+		  text-transform: none
+		
+		:-moz-placeholder
+		  color: black
+		  font-weight: 700
+		  font-style: italic
+		  text-transform: none
+
+	.row
+		margin: 0
+
+		& + .row
+			margin-top: 20px
+
+		p
+			color: white
+			margin-top: 20px
+			font-size: 1.5rem
+			line-height: 2rem
+			font-style: italic
+
+	.zb-regular-button
+		margin-top: 30px
+
+	.zb-close-modal
+		position: absolute
+		width: 40px
+		height: 40px
+		right: 0
+		font-family: 'Open Sans'
+		font-size: 2rem
+		color: white
+		transition: all .5s
+
+		&:hover
+			opacity: .5
+
+.zb-modal-termos
+	width: 90%
+	max-width: 1000px
+	height: 95vh
+	background: white
+	z-index: 3000000
+	position: fixed
+	top: 50%
+	left: 50%
+	@include translate()
+	font-family: 'Open Sans'
+	display: none
+
+	.zb-close-modal-termos
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		right: 0;
+		font-family: 'Open Sans';
+		font-size: 2rem;
+		color: $gray;
+		transition: all .5s;
+
+	h1
+		color: $blue
+		font-size: 2.5rem
+		text-align: center
+		font-weight: 700
+		margin-top: 40px
+		padding: 0 20px
+
+	.zb-text-scroll
+		padding: 0 30px
+		top: 130px
+		bottom: 30px
+		position: absolute
+		overflow: scroll
+
+	p
+		font-size: 1.4rem
+		line-height: 1.8rem
+		color: $gray
+
+.zb-mobile-header
+	display: none
+
+.zb-nav-mobile
+	display: none
+
+.zb-slider-mobile
+	display: none
+
+.zb-obs
+	display: none
+
+.zb-container-buttons
+	display: none
+
+.zb-exibir-mapa
+	display: none
+
+
+
+.zb-regular-section
+	background: #F7F7F9
+	min-height: 100vh
+	padding-top: 100px
+
+	h1
+		margin-bottom: 30px
+		font-family: 'Open Sans'
+		font-weight: 700
+
+	p
+		text-align: center
+		color: $light-gray
+
+	.zb-container-form
+		font-family: 'Open Sans'
+		display: inline-block
+		vertical-align: top
+		max-width: 600px
+		width: 100%
+		background: white
+		padding: 40px
+		border: 1px solid #ddd
+		border-radius: 4px
+
+		label
+			margin-bottom: 4px
+
+
+
+
+@media all and (min-width: 1600px)
+	.zb-section-como-funciona 
+		img
+			right: 22%
+
+
+
+@media all and (max-width: 1360px)
+
+	.zb-main-header h1
+		width: 220px
+
+	.zb-featured-text
+		font-size: 1.8rem
+		line-height: 2.2rem
+
+	.zb-h1-blue
+		font-size: 7rem
+		line-height: 7rem
+		margin-left: -6px
+
+	.zb-container-main-slider 
+		.zb-slide 
+			.zb-container-content
+				width: 430px
+
+				h1
+					font-size: 6rem
+					line-height: 5.5rem
+
+
+				h2
+					font-size: 1.8rem
+					line-height: 2.2rem
+
+	.zb-container-btn-simulacao
+		p
+			font-size: 1.6rem
+		button
+			font-size: 2rem
+
+	.zb-section-como-funciona 
+
+		h1
+			font-size: 7rem
+			line-height: 5.5rem
+
+		.zb-selo-energia-renovavel
+			width: 250px
+			top: 90px
+
+		img
+			width: 370px
+
+
+	.zb-section-formas-aderir 
+		.zb-box-container 
+			.zb-container-beneficios
+
+				h3
+					font-size: 2.2rem
+
+			.zb-container-list-beneficios
+
+				h3
+					font-size: 2.2rem
+
+				button
+					font-size: 1.8rem
+
+	.zb-section-motivos 
+		h1
+			font-size: 7rem
+			line-height: 5.5rem
+			margin-bottom: 3px
+
+	.zb-section-energias
+		
+		.zb-menu-energias
+			top: 33%
+
+		h1
+			font-size: 6rem
+			line-height: 5rem
+
+	.zb-section-clientes
+
+		h1
+			font-size: 7rem
+			line-height: 5.5rem
+			margin-top: 8px
+
+		.zb-watts 
+			.zb-half-content 
+				.zb-full-wrap-text 
+					.zb-featured-text
+						font-size: 4rem
+
+						span
+							font-size: 2rem
+
+
+	footer 
+		.zb-content
+			.zb-wrap-content-third
+				ul
+					li
+						a
+							font-size: 1.3rem
+							line-height: 1.3rem
+
+				.zb-email
+					font-size: 1.5rem
+
+				h1
+					width: 80%
+					float: right
+
+.zb-btn-green
+	color: $green-btn !important
+	text-decoration: none !important
+
+.zb-btn-red
+	color: $red-form !important
+	text-decoration: none !important
+
+	&:hover
+		opacity: .7
+
+.zb-modal-premium
+
+	.zb-form-grauito-response
+		padding: 10px 10px
+
+		button
+			display: none
+		   
+		.zb-btn-ok-premium
+			color: white
+
+@media all and (max-width: 1313px)
+
+	.zb-main-header
+		ul
+			li
+				& + li
+					margin-left: 5px !important
+
+				// a
+				// 	font-size: 1.13rem !important
+
+@media all and (max-width: 1313px)
+
+	.zb-main-header
+		ul
+			li
+				a
+					font-size: 1.4rem !important
+
+@media all and (max-width: 1055px)
+
+	.zb-main-header
+		ul
+			li
+				a
+					font-size: 1.3rem !important
+
+
+@media all and (max-width: 1000px)
+
+	.zb-main-header, .zb-second-header, .zb-suport-header
+		display: none
+
+	.zb-section-slider
+		display: none
+
+	.zb-mobile-header
+		display: block
+		width: 100%
+		height: 70px
+		background: $gray
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 10000
+
+		h1
+			background: url("../img/ziit-business-icon.svg") no-repeat center
+			width: 90px
+			height: 30px
+			left: 3%
+			position: absolute
+			top: 50%
+			@include translate-y()
+			margin: 0
+
+			span
+				display: none
+
+		.zb-btn-menu-mobile
+			color: white
+			position: absolute
+			right: 3%
+			top: 50%
+			@include translate-y()
+			font-size: 3rem
+
+
+	.zb-nav-mobile
+		position: fixed
+		width: 100%
+		background: $gray
+		top: 70px
+		bottom: 0
+		z-index: 10000
+		padding: 0 3% 3% 3%
+		border-top: 1px solid rgba(white, .2)
+
+		ul
+			list-style: none
+
+			li
+				a
+					color: white
+					padding: 14px 0
+					display: block
+					font-size: 2rem
+					font-family: 'Open Sans'
+
+					&:hover
+						text-decoration: none
+
+					&:active
+						text-decoration: none
+
+					&:focus
+						text-decoration: none
+						outline: none
+						opacity: .5
+
+				+ li
+					border-top: 1px solid rgba(white, .2)
+
+	.zb-slider-mobile
+		display: block
+		width: 100%
+		height: 100vh
+		position: relative
+
+		.zb-slider
+			padding-top: 80px
+			position: relative
+			width: 100%
+			height: 100vh
+			background: white
+			font-family: 'Open Sans'
+
+			.zb-slider-icon
+				width: 100px
+				height: 100px
+				border-radius: 100%
+				position: absolute
+				top: -120px
+				left: 50%
+				@include translate-x
+				border: 1px solid white
+				background-repeat: none
+
+			.zb-centered-content
+				position: absolute
+				top: 50%
+				left: 50%
+				@include translate()
+
+			.zb-container-infos
+				width: 100%
+				height: 55%
+				background: white
+				position: absolute
+				left: 0
+				bottom: 0
+				color: white
+				padding: 0 3%
+				text-align: left
+				text-align: center
+				z-index: 1
+
+				.zb-container-btn-simulacao
+					left: 50%
+					width: 300px
+					@include translate-x()
+					position: relative
+					top: 0
+					margin-top: 5%
+
+				h1
+					font-size: 2.5rem
+					font-weight: 700
+					line-height: 2.6rem
+					margin-top: 8px
+					
+
+					span
+						display: inline-block
+						border-bottom: 1px solid white
+
+					br
+						display: none
+
+				h2
+					font-size: 1.6rem
+					line-height: 2rem
+					max-width: 400px
+					display: inline-block
+
+		.zb-slider-eolica
+			background: url('../img/ziit-eolica-2.jpg') no-repeat 70%
+			background-size: cover
+
+			.zb-image-slider
+				background: url('../img/ziit-eolica-1.jpg') no-repeat 70%
+				background-size: cover
+
+			.zb-slider-icon
+				background-image: url('../img/sprite-energias.svg')				
+				background-size: 450% 
+				background-position: -9px
+				background-color: $purple		
+
+			.zb-container-infos
+				background: rgba($purple, .9)
+
+		.zb-slider-biomassa
+			background: url('../img/ziit-biomassa-2.jpg') no-repeat 80%
+			background-size: cover
+
+			.zb-image-slider
+				background: url('../img/ziit-biomassa-1.jpg') no-repeat 93%
+				background-size: cover
+
+			.zb-slider-icon
+				background-image: url('../img/sprite-energias.svg')				
+				background-size: 450% 
+				background-position: -119px
+				background-color: $biomassa		
+
+			.zb-container-infos
+				background: rgba($biomassa, .9)
+
+		.zb-slider-hidrica
+			background: url('../img/ziit-hidrica-2.jpg') no-repeat 70%
+			background-size: cover
+
+			.zb-image-slider
+				background: url('../img/ziit-hidrica-1.jpg') no-repeat 90% -80px
+				background-size: cover
+
+			.zb-slider-icon
+				background-image: url('../img/sprite-energias.svg')				
+				background-size: 450% 
+				background-position: -229px
+				background-color: $blue		
+
+			.zb-container-infos
+				background: rgba($blue, .9)
+
+		.zb-slider-solar
+			background: url('../img/ziit-solar-2.jpg') no-repeat 70%
+			background-size: cover
+
+			.zb-image-slider
+				background: url('../img/ziit-solar-1.jpg') no-repeat 98% -140px
+				background-size: cover
+
+			.zb-slider-icon
+				background-image: url('../img/sprite-energias.svg')				
+				background-size: 450% 
+				background-position: -339px
+				background-color: $red		
+
+			.zb-container-infos
+				background: rgba($red, .9)
+
+	.zb-section-como-funciona
+		padding-top: 220px
+
+		.zb-selo-energia-renovavel
+			top: 80px
+			right: auto
+			left: 50%
+			@include translate-x()
+
+		.zb-text-container
+			width: 100%
+			padding: 3%
+			margin-top: -10px
+			
+			p
+				width: 100%
+
+		h1
+			padding: 0
+			margin: 0
+			font-size: 4.1rem
+			line-height: 4.6rem
+			text-align: center
+
+			br
+				display: none
+
+		.zb-helice
+			display: none
+
+
+	.zb-h1-blue
+		padding: 0
+		margin: 0
+		font-size: 4.1rem
+		line-height: 3.4rem
+		text-align: center
+		letter-spacing: -.3rem
+
+	.zb-content
+		width: 100%
+
+	.featherlight 
+
+		.featherlight-content
+			max-width: 90%
+
+			img
+				width: 100% !important
+
+	.zb-section-formas-aderir
+
+		h2
+			margin-top: -2px
+
+		.zb-box-container
+
+			.zb-container-beneficios
+				width: 100%
+
+				ul li
+					height: auto
+					display: block
+					position: relative
+					padding: 20px 0
+
+					.zb-list-align
+						position: relative
+						top: 0
+
+					.zb-obs
+						font-style: italic
+						color: $green
+						display: block
+
+			.zb-container-list-beneficios
+				display: none
+
+			.zb-container-buttons
+				text-align: center
+				padding-top: 20px
+				padding-bottom: 10px
+				display: block
+
+				button
+					background: $green
+					padding: 10px 10px
+					color: $gray
+					margin: 0 4px
+					border: 4px solid rgba(white, .6)
+					margin-bottom: 20px
+
+	.zb-modal
+		width: 98%
+		height: auto
+		border: 5px solid white
+
+		.zb-row-container-checkbox
+			margin-top: 12px !important
+
+		.zb-regular-button
+			margin-top: 10px
+
+		.row 
+			p
+				margin-top: 8px
+				line-height: 1.2rem
+
+		form
+			padding: 10px
+
+			h1
+				font-size: 3rem
+				margin-bottom: 6px
+
+			label
+				font-size: 1.6rem
+				line-height: 1.6rem
+
+			input
+				height: 35px
+
+	.zb-modal-termos
+		height: 90vh
+		width: 98%
+
+		.zb-text-scroll
+			-webkit-overflow-scrolling: touch
+
+
+	.zb-section-numeros 
+
+		.zb-regular-button
+			font-size: 1.7rem
+
+		.zb-box-container 
+			padding: 3%
+
+			.zb-container-form
+				width: 100%
+
+			.zb-container-slider
+				width: 100%
+				margin-left: 0
+				margin-top: 20px
+
+				span
+					font-size: 1.4rem
+					height: 80px
+
+				.slick-dots
+					bottom: 20px
+
+
+	.zb-section-numeros 
+		.zb-box-container
+			margin-top: -1px
+
+	.zb-section-motivos
+
+		.zb-text-container
+			width: 100%
+			padding: 3%
+			margin-top: -2px
+
+			p
+				width: 100%
+
+		h1
+			font-size: 4.1rem
+			line-height: 3.4rem
+			padding: 0
+			margin: 0
+			text-align: center
+			letter-spacing: -.3rem
+
+		img
+			display: none
+
+
+	.zb-section-energias 
+
+		padding-top: 100px
+		height: auto
+		padding-bottom: 10px
+
+		.zb-content
+			padding: 3%
+
+		h1
+			font-size: 3.4rem
+			line-height: 3.2rem
+			margin: 0
+			top: 0
+			text-align: center
+			margin-bottom: 50px
+
+		.zb-menu-energias
+			top: auto
+			margin-top: 20px
+			width: 100%
+			position: relative
+
+			ul
+				width: 100%
+				overflow: hidden
+
+				li
+					width: 150px
+					height: 150px
+					margin-bottom: 15px
+
+					.zb-button-biomassa
+						background-position: -150px center
+
+					.zb-button-hidrica
+						background-position: -300px center
+
+					.zb-button-solar
+						background-position: -450px center
+
+		.zb-main-text
+			position: relative
+			top: auto
+			width: 100%
+			margin-top: 20px
+
+		.zb-slider-energia
+			width: 100%
+			display: none
+			z-index: 999
+			position: fixed
+
+			.zb-map-container
+				width: 100%
+				position: fixed !important
+				padding-top: 80px
+				top: 0
+				right: 0
+				width: 100%
+				height: 100%
+				z-index: 9999
+				display: none
+
+
+			.zb-icon-energia
+				width: 70px
+				height: 70px
+				margin: 0px
+				top: 10px
+				position: absolute
+				left: 0
+
+			.zb-wrap-infos
+
+				position: relative
+				top: 40px
+				-webkit-transform: none
+			    -moz-transform: none
+			    transform: none
+
+				h1
+					width: 100%
+					position: relative
+					display: block
+					font-size: 3rem
+					line-height: 3rem
+					margin: 0
+					margin-top: 20px
+					text-align: left
+					padding-left: 80px
+					margin-bottom: 40px
+					margin-top: 30px
+
+					br
+						display: none
+
+				.zb-inline-text
+					width: 100%
+					font-size: 1.6rem
+					line-height: 1.6rem
+
+				.zb-regular-inline-button
+					margin-top: 0
+					display: none
+
+				.zb-button-voltar
+					position: absolute
+					right: 0
+					top: 20px
+					width: 40px
+					height: 40px
+					background: none
+					-webkit-transform: none
+					-moz-transform: none
+					transform: none
+					right: 5px
+					left: auto
+
+				.zb-exibir-mapa
+					color: white
+					font-size: 2rem
+					font-weight: 700
+					border: 1px solid white
+					padding: 2px 6px
+					margin-top: 10px
+					display: block
+
+			.zb-fechar-mapa
+				color: white
+				font-size: 1.5rem
+				font-weight: 400
+				border: 1px solid white
+				padding: 2px 6px
+				position: absolute
+				right: 3%
+				top: 90px
+				z-index: 99999
+				display: block
+
+
+
+	.zb-section-faq 
+
+		h1
+			width: 100%
+			font-size: 4.1rem
+			line-height: 3.4rem
+			text-align: center
+
+
+	.zb-section-clientes 
+		.zb-watts 
+			.zb-half-content
+				width: 100%
+
+	footer 
+		.zb-content
+			.zb-wrap-content-third
+				width: 100%
+				text-align: center
+
+				+ .zb-wrap-content-third
+					border-top: 1px solid rgba($light-gray, .2)
+
+				ul
+					margin-bottom: 40px
+
+				.zb-email
+					padding: 2px 0 10px 0
+					display: inline-block
+
+				h1
+					float: none
+					display: inline-block
+					max-width: 200px
+
+
+
+
+
+aside
+	width: 30%
+	background-color: $bg-menu-dash
+	display: block
+	float: left
+	margin: 0
+	height: 100vh
+	text-align: left
+	font-family: 'Open Sans'
+	position: fixed
+
+	h1
+		width: 236px
+		height: 54px
+		background: white
+		display: inline-block
+		vertical-align: top
+		background: url('../img/ziit-business.svg') no-repeat center
+		background-size: 100%
+		margin: 40px 0 40px 20px
+
+		> span
+			display: none
+
+	.zb-container-user-info	
+		border-top: 1px solid $stroke
+		border-bottom: 1px solid $stroke
+		padding: 60px 0 60px 20px
+		position: relative
+
+		.zb-conta-premium
+			position: absolute
+			color: $green
+			top: 10px
+			right: 20px
+			text-transform: uppercase
+			font-size: 1.2rem
+			font-weight: 700
+
+			&:hover
+				color: white
+				text-decoration: none
+
+		.zb-user-info
+			text-align: left
+			color: black
+			display: inline-block
+
+			.zb-user-icon
+				width: 60px
+				height: 60px
+				background-color: $green
+				border-radius: 100%
+				font-size: 4rem
+				line-height: 60px
+				display: inline-block
+				text-align: center
+				vertical-align: top
+				margin-right: 10px
+				text-transform: uppercase
+				font-family: Arial
+
+			.zb-container-user-infos
+				display: inline-block
+				width: 200px
+				vertical-align: middle
+				color: white
+				position: relative
+				font-size: 1.6rem
+
+				.zb-name
+					width: 100%
+					display: inline-block
+					vertical-align: top
+					font-size: 2rem
+					line-height: 2.2rem
+					text-transform: uppercase
+					color: $green
+
+				.zb-minha-conta
+					display: inline-block
+					color: $green
+					transition: all .2s
+					margin-top: 20px
+
+					&:hover, &:active
+						text-decoration: none
+						color: 	white
+
+	.zb-dash-menu
+		text-align: left
+
+		ul
+			li
+
+				+ li
+					border-top: 1px solid $stroke
+
+				& > .active
+					border-right: 7px solid $green
+
+				i
+					width: 25px
+
+				& > .active
+					color: $green
+
+				a
+					display: inline-block
+					font-size: 1.6rem
+					color: white
+					padding: 14px 20px
+					width: 100%
+
+					&:hover, &:active
+						text-decoration: none
+						color: 	$green
+
+.zb-header-dashboard
+	font-family: 'Open Sans'
+	display: block
+	width: 70%
+	height: 80px
+	background-color: $light-background
+	border-bottom: 1px solid $light-stroke
+	position: relative
+	color: $gray-header
+	position: fixed
+	top: 0
+	left: 30%
+	z-index: 998
+
+	h2
+		font-size: 2rem
+		display: block
+		position: absolute
+		top: 50%
+		left: 20px
+		margin: 0
+		@include translate-y()
+
+	.zb-right-dashboard-menu
+		display: inline-block
+		position: absolute
+		right: 0
+		top: 50%
+		@include translate-y()
+		font-size: 1.8rem
+		z-index: 999
+
+		.zb-container-notifications
+			display: inline-block
+			vertical-align: middle
+			font-size: 3rem
+			position: relative
+
+			.zb-badge
+				width: 20px
+				height: 20px
+				border-radius: 100%
+				display: block
+				background: $orange
+				font-size: 1.2rem
+				line-height: 20px
+				font-weight: 700
+				position: absolute
+				top: -1px
+				right: -10px
+				color: white
+
+			.zb-badge-gray
+				background-color: $icon-gray
+
+			.zb-list-notifications
+				position: absolute
+				top: 50px
+				right: 0
+				width: 400px
+				background: white
+				font-size: 1.6rem
+				line-height: 1.8rem
+				padding: 6px 10px
+				border: 1px solid #d2d2d6
+				display: none
+
+				table
+					tr
+						+ tr
+							border-top: 1px solid $light-stroke
+
+						td
+							padding: 10px 0
+
+							i
+								transition: all .2s
+
+								&:hover
+									color: $red-form
+
+							&:last-child
+								text-align: right
+								padding: 0 10px
+
+				.zb-arrow
+					width: 22px
+					height: 11px
+					position: absolute
+					top: -11px
+					right: 5px
+					background: url('../img/sprite-notification.svg') no-repeat center
+
+				ul
+					list-style: none
+					margin: 0
+
+					li
+						padding: 10px 0
+
+						+ li
+							border-top: 1px solid #d2d2d6
+
+		.zb-button-user
+			display: inline-block
+			vertical-align: middle
+			transition: all .3s
+			height: 80px
+			padding: 0 10px
+			margin-left: 10px
+			position: relative
+			min-width: 200px
+
+			&:hover
+				background: $bg-active-user-button
+
+
+			.zb-user-icon
+				display: inline-block
+				vertical-align: middle
+				border-radius: 100%
+				width: 40px
+				height: 40px
+				background: $icon-gray
+				line-height: 40px
+				font-size: 2.5rem
+				color: $light-background
+				text-transform: uppercase
+				font-family: Arial
+
+			.zb-name
+				font-weight: 700
+				margin: 0 2px
+
+			i
+				font-size: 2.5rem
+				display: inline-block
+				vertical-align: middle
+				position: relative
+				top: -1px
+
+			.zb-cascade-menu
+				display: none
+				position: absolute
+				width: 100%
+				top: 80px
+				left: 0
+				background: $bg-cascade-menu
+				border-left: 1px solid $light-stroke
+				border-bottom: 1px solid $light-stroke
+
+				ul
+					list-style: none
+					text-align: left
+					display: block
+					margin: 0
+					font-size: 1.6rem
+
+					li
+						display: block
+						transition: .2s all
+
+						&:hover
+							background: $bg-cascade-menu-inner							
+
+
+						+ li
+							border-top: 1px solid $light-stroke
+
+						a
+							display: inline-block
+							vertical-align: middle
+							color: $gray-header
+							padding: 10px 20px
+
+							&:hover, &:active
+								text-decoration: none
+
+							i
+								display: inline-block
+								vertical-align: middle
+								font-size: 1.6rem
+								width: 20px
+
+.zb-bg-dashboard
+	background: $bg-cascade-menu
+
+
+.zb-section-dashboard
+	width: 70%
+	margin-left: 30%
+	text-align: left
+	padding: 20px
+	font-family: 'Open Sans'
+	color: $gray-header
+	padding-top: 100px
+
+	h2
+		font-size: 1.6rem
+		line-height: 2rem
+		font-weight: 700
+		margin-bottom: 20px
+
+	.row
+		margin: 0
+
+		.zb-white-container
+			background: white
+			border: 1px solid $light-stroke
+			padding: 20px
+
+		.zb-destaque
+			color: $destaque-dashboard
+			font-weight: 700
+			font-size: 3rem
+			line-height: 3.4rem
+			margin-bottom: 10px
+			display: inline-block
+
+			small
+				font-style: italic
+				font-weight: 400
+				font-size: 2rem
+
+		p
+			font-size: 1.4rem
+			color: $gray-header
+			text-align: left
+
+		a
+			color: $gray-header
+			text-decoration: underline
+			font-weight: 700
+			transition: all .3s
+
+			&:hover
+				color: black 
+
+		.zb-info
+			border-top: 1px solid $light-stroke
+			margin-top: 10px
+			padding-top: 10px
+
+	.zb-energy
+		width: 55px
+		height: 55px
+		display: inline-block
+		vertical-align: middle
+		margin-bottom: 10px
+		margin-right: 5px
+		background-size: 400%
+		background-image: no-repeat
+
+	.zb-hidrica
+		background-image: url('../img/sprite-energias-gray.svg')
+		background-position: -110px center
+
+	.zb-eolica
+		background-image: url('../img/sprite-energias-gray.svg')
+		background-position: -220px center
+
+	.zb-solar
+		background-image: url('../img/sprite-energias-gray.svg')
+		background-position: -385px center
+
+	.zb-biomassa
+		background-image: url('../img/sprite-energias-gray.svg')
+		background-position: -495px center
+
+.btn
+	color: white !important
+	text-decoration: none !important
+	margin-bottom: 10px
+
+	i
+		font-size: 2rem
+		vertical-align: middle
+		margin-right: 4px
+
+.zb-dashboard-regular-title
+	font-size: 4rem
+	line-height: 4rem
+	color: $destaque-dashboard
+	margin-bottom: 40px
+	font-weight: 700
+
+.zb-dashboard-centered
+	text-align: center
+
+.zb-dashboard-activate
+	display: inline-block
+	max-width: 265px
+	white-space: normal
+	line-height: 1.6rem
+
+	i
+		font-size: 3rem
+		display: inline-block
+		vertical-align: middle
+		margin-right: 10px
+
+	span
+		display: inline-block
+		vertical-align: middle
+		width: 85%
+		text-align: left
+
+.zb-dashboard-total
+	text-align: center
+	border-top: 1px solid $light-stroke
+	padding-top: 10px
+
+.zb-dashboard-pano
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: rgba(black, .85)
+	z-index: 1000
+	display: none
+	cursor: pointer
+
+.zb-dashboard-modal
+	position: fixed
+	top: 50%
+	left: 50%
+	@include translate()
+	width: 90%
+	max-width: 1000px
+	background: white
+	max-height: 80vh
+	min-height: 10vh
+	z-index: 1001
+	padding: 20px
+	font-family: 'Open Sans'
+	display: none
+
+	.zb-close-dashboard-modal
+		font-size: 3rem
+		position: absolute
+		right: 12px
+		top: 5px
+		z-index: 1000
+
+		&:hover
+			opacity: .7
+
+	.zb-title-dashboard-modal
+		display: block
+		font-size: 3rem
+		line-height: 3.4rem
+		padding-bottom: 10px
+		margin-bottom: 10px
+		border-bottom: 1px solid $gray-header
+
+	.zb-smalltitle-dashboard-modal
+		display: block
+		font-size: 1.8rem
+		line-height: 2.2rem
+		color: $gray-header
+		font-weight: 700
+		margin-bottom: 5px
+
+	p
+		font-size: 1.4rem
+		line-height: 1.8rem
+
+.btn-dashboard-modal
+	color: $green-btn
+
+.btn-dashboard-form-action
+	font-size: 1.8rem
+	color: $green-btn
+
+.btn-dashboard-red
+	color: $red-form
+
+.zb-dashboard-accordion
+
+	h2
+		background: $bg-active-user-button
+		position: relative
+		margin: 0
+		cursor: pointer
+		margin-top: 20px
+
+		p
+			display: block
+			padding: 10px 40px 10px 20px
+
+		span
+			position: absolute
+			right: 10px
+			top: 50%
+			@include translate-y()	
+
+	h2:first-child
+		margin-top: 0		
+
+	.zb-resposta-users
+		padding: 10px
+		border: 1px solid $light-stroke
+		text-align: justify !important
+		display: none
+
+		p
+			display: block
+
+	iframe
+		display: block
+		width: 100%
+		margin: 20px auto
+		max-width: 500px
+
+
+.zb-btn-dashboard-call
+	font-size: 3rem
+	line-height: 3rem
+	width: 100%
+	white-space: normal
+
+	i
+		width: 100%
+		font-size: 6rem
+
+// .zb-content-form-gratuito
+// 	display: none
+
+.zb-form-grauito-response
+	display: none
+	text-align: center
+
+	p
+		margin-top: 20px
+		text-align: center
+		color: white
+		font-weight: 400
+		line-height: 2.5rem
+		font-family: 'Open Sans'
+		font-size: 1.8rem
+	
+	.zb-loader
+		display: inline-block
+		width: 84px
+		height: 84px
+		background: url('../img/loader.gif') no-repeat center
+
+	button
+		font-size: 2rem
+		font-weight: 400
+		background: $dark-blue
+		padding: 4px 20px
+		margin: 20px 0
+		border: 2px solid white
+
+		&:hover
+			opacity: .8
+
+.zb-breadcrumbs
+	text-decoration: none !important
+	font-weight: 400 !important
+	color: $gray-header !important
+	opacity: .7
+
+.zb-map-usina
+	width: 100%
+	height: 300px
+	background: $light-stroke
+
+
+.alert 
+	ul
+		list-style: none
+	a
+		text-decoration: none !important
+
+.gm-style-iw
+	text-align: left
+	h1
+		color: black !important
+		font-size: 2rem !important
+		line-height: 2rem !important
+		letter-spacing: 0 !important
+		margin: 10px 0 0 0 !important
+	p
+		margin: 0 0 5px 0
+
+
+.zb-paginate-widget
+	a
+		text-decoration: none !important
+
+.zb-usina-status-label
+	font-weight: 400
+	width: 100%
+	margin-bottom: 10px
+	
+
+	strong
+		text-transform: uppercase
+
+.zb-usina-ativa
+	color: $green-btn
+
+.zb-usina-inativa
+	color: $red-form
+
+.zb-usina-status-label-red
+	color: $red-form
+
+.zb-usina-status-label-green
+	color: $green-btn
+
+
+.modal-dialog
+	.modal-header
+		p
+			text-align: center
+			font-size: 3rem
+			margin: 0
+	.modal-body
+		p
+			text-align: center
+			margin-bottom: 0
+	.modal-footer
+		text-align: center
+		button
+			margin: 0
+			width: 90px
+
+.zb-map-origem
+	background: $light-stroke
+	width: 100%
+	height: 250px
+
+.zb-investimento-resultado
+	display: none;
+
+	text-align: center
+	border-top: 1px solid $light-stroke
+	padding-top: 30px
+
+	label
+		font-size: 1.8rem
+
+	.zb-investimento
+		font-size: 2.5rem
+
+
+.zb-wrap-button-user
+	display: inline-block
+	vertical-align: top
+	max-width: 285px
+	margin: 0 10px
+
+.btn-historico, .btn-contas
+	line-height: 2rem	
+	width: 100%
+
+.passo2, .passo3-historico, .passo3-contas
+	display: none
+
+.zb-green-color
+	color: $green-btn !important
+
+.zb-red-color
+	color: $red-form !important
+
+.zb-red-color-light
+	color: #f2a2a2 !important
+
+.zb-orange-color
+	color: $orange !important
+
+.zb-escolha-energia
+	margin-top: 20px
+	text-align: justify
+
+	form
+		display: inline-block
+		position: relative
+		text-align: center
+		max-width: 100px
+
+		label
+			width: 100%
+			display: inline-block
+
+.zb-icone-selecionado-user
+	display: inline-block
+	
+	i
+		margin: 0 !important
+
+	p
+		text-align: center !important
+		background: white
+
+.featherlight-content
+	overflow: initial !important;
+	.caption
+		position: absolute
+		top: -40px
+		color: white
+		font-size: 2rem
+		font-family: 'Open Sans'
+		font-weight: 700
+		left: 50%
+		@include translate-x()
+		width: 100%
+		text-align: center
+
+.zb-selo-beneficio
+	width: 100%
+	height: 80px
+	position: relative
+	display: block
+	margin-bottom: 10px
+
+.zb-selo-beneficio-gratuito
+	background: url('../img/selo-empresa-testando-renovavel.svg') no-repeat center
+
+.zb-selo-beneficio-premium
+	background: url('../img/selo-empresa-renovavel.svg') no-repeat center
+
+.zb-item-beneficio
+	color: $green
+	font-family: 'Open Sans';
+	padding-top: 25px
+
+.zb-item-beneficio-red
+	color: $red
+
+.zb-input-contas
+	width: 0.1px
+	height: 0.1px
+	opacity: 0
+	overflow: hidden
+	position: absolute
+	z-index: -1
+
+	&:focus + label
+		outline: 1px dotted #000;
+		outline: -webkit-focus-ring-color auto 5px;
+
+	& + label
+		width: 100%
+		height: 34px
+		background: $icon-gray
+		position: relative
+		font-family: 'Open Sans'
+		border-radius: 3px
+		cursor: pointer
+		transition: all .3s
+		color: white
+		overflow: hidden
+
+		&:hover
+			opacity: .7
+
+		span
+			position: absolute
+			width: 100%
+			text-align: center
+			display: block
+			top: 50%
+			@include translate-y()
+			line-height: 1rem
+
+.zb-green-input-file
+	background: $green-btn !important
+
+
+.zb-btn-inativo
+	background: $light-stroke
+	border-color: $light-stroke
+
+
+.zb-btn-auditoria
+	font-size: 2rem
+	line-height: 36px
+	color: $light-stroke
+
+.zb-auditoria-resposta
+	margin-bottom: 20px
+	position: relative
+	width: 100%
+	float: left
+	top: -10px
+
+.zb-confirmar-reprovacao
+	height: 34px
+	background: $green-btn
+	border-radius: 4px
+	color: white
+	padding: 0 10px
+
+.zb-status-auditoria
+	p
+		font-size: 2rem !important
+		margin: 0
+
+.zb-panel-retorno-solicitacao
+	text-align: center
+	margin-top: 10px
+
+	span
+		font-size: 1.8rem
+		width: 100%
+		display: block
+		padding-bottom: 10px
+		border-bottom: 1px solid $light-stroke
+		margin-bottom: 20px
+
+.btn-pagamento-pagseguro
+	margin-bottom: 0 !important
+
+.zb-pano-submit
+	width: 100%
+	height: 100vh
+	background: rgba(black, .85)
+	z-index: 1000000
+	position: fixed
+
+.zb-modal-submit
+	width: 90%
+	max-width: 300px
+	position: fixed
+	z-index: 1000001
+	background: white
+	border-radius: 5px
+	top: 50%
+	left: 50%
+	@include translate()
+	padding: 20px
+	text-align: center
+
+	p
+		width: 100%
+		text-align: center
+		font-family: 'Open Sans'
+		margin: 0
+
+	.zb-loader-submit
+		width: 60px
+		height: 60px
+		background: red
+		display: inline-block
+		background: url('../img/submit-loader.gif') no-repeat center
+
+.zb-section-video
+	height: 100vh
+	display: block
+	iframe
+		height: 100%
+

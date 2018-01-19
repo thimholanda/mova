@@ -1,0 +1,317 @@
+@media all and(max-width: 1300px)
+
+	/* === FIRST HEADER=== */
+
+	.mr-first-header
+
+	/* === REGULAR HEADER=== */
+
+	.mr-first-view .mr-linear-menu ul li
+		font-size: 1.3rem
+		padding: 3px 10px
+
+
+	.mr-regular-header .mr-linear-menu ul li
+		font-size: 1.3rem
+		padding: 3px 10px
+
+
+	/* === STICKY HEADER=== */
+
+	.mr-sticky-header 
+		
+		h1
+			width: 220px
+			left: 50%
+			top: 40%
+			@include translate()
+
+		.mr-linear-menu
+			left: 50%
+			width: 100%
+			bottom: 8px
+
+			@include translate-x()
+
+			ul 
+				li
+					font-size: 1.3rem
+
+					+ li
+						padding-left: 8px
+						margin-left: 8px
+
+
+@media all and(max-width: 1023px)
+
+	*
+		box-sizing: border-box
+	
+	.mr-first-header, .mr-sticky-header, .mr-linear-menu, .mr-first-view .mr-trace-light-blue, .mr-regular-header
+		display: none
+
+	section
+		margin-top: 70px
+
+	.mr-mobile-header
+		width: 100%
+		height: 70px
+		display: block !important
+		position: fixed !important
+		left: 0
+		top: 0
+		background: rgba(white, .95)
+		z-index: 9999
+		position: relative
+		border-bottom: 1px solid $light-blue
+
+		h1
+			width: 186px
+			left: 3%
+
+		button
+			width: 45px
+			height: 45px
+			background: gray
+			position: absolute
+			right: 3%
+			top: 50%
+			background: url('../img/icon-menu-mobile.svg') no-repeat center
+			@include translate-y
+
+	.mr-first-view
+		height: auto
+
+		.mr-main-img
+			height: 30vh !important
+			background-size: 160%
+
+		.mr-icons-menu
+			margin-top: 30px !important
+
+		.mr-white-trace
+			margin-top: 40px !important
+
+		address
+			position: relative
+			margin-top: 30px
+			width: 100%
+			padding: 0 2%
+
+	.content
+		padding: 0 3%
+
+	.mr-noticias-view form
+		width: 100%
+		margin: 0px
+
+	.mr-escritorio-view .mr-wrap-content
+		width: 100%
+
+	.mr-header-img
+		height: 30vh !important
+		background-size: cover
+
+	h2
+		
+		font-size: 3.2rem
+		line-height: 3.5rem
+		padding: 20px 0
+
+		.mr-half-element
+			width: 100%
+			padding-right: 70%
+			height: 20px
+			vertical-align: top
+
+		.mr-text
+			vertical-align: top !important
+
+	.mr-escritorio-view .mr-sticky-news
+		width: 100%
+		margin-top: 30px
+
+	.mr-slider-images button
+		margin-bottom: 10px
+
+	.mr-escritorio-view, .mr-areas-view, .mr-profissionais-view, .mr-noticias-view, .mr-selecao-view
+		padding-bottom: 0px !important
+
+	.mr-button-list
+		font-size: 1.6rem
+
+	.mr-profissionais-view .mr-infos
+		padding: 20px 5px
+
+	.mr-profissionais-view .mr-infos .mr-profile-img
+		width: 28%
+
+	.mr-profissionais-view .mr-infos .mr-wrap-infos
+		width: 68%
+		margin-left: 4%
+
+	.mr-profissionais-view .mr-infos .mr-profile-img .mr-spacer
+		margin-top: 15px
+
+	.mr-noticias-view .mr-noticia-cat
+		text-align: left
+
+	.mr-noticias-view .mr-noticia-cat ul li+li
+		margin-left: 0
+
+	.mr-noticias-view .mr-noticia-cat ul li
+		margin: 0 10px 10px 0
+
+	.mr-noticias-view .mr-list-news
+		margin-top: 20px
+
+	.mr-noticias-view .mr-list-news a .mr-wrap-infos
+		width: 100%
+
+	.mr-noticias-view .mr-list-news .mr-ico-plus
+		display: none
+
+	.mr-noticias-view .mr-list-news a p
+		margin-top: 10px;
+		line-height: 2.2rem
+
+	.mr-noticias-view form input[type=submit]
+		border-radius: 0px
+
+	.mr-selecao-view form input, .mr-selecao-view form textarea, .mr-selecao-view form select, .mr-selecao-view form button
+		margin-bottom: 10px
+
+	.mr-contato-view address
+		margin-top: 20px
+		margin-bottom: 60px
+
+	.mr-contato-view address a
+		margin-bottom: 10px
+
+
+	.mr-contato-view address span
+		border-left: none
+		text-align: center
+		padding: 0
+
+		br
+			display: none
+
+	.mr-contato-view .mr-btn-waze, .mr-contato-view .mr-btn-google-maps
+		padding: 0 20px
+		width: 100px
+
+	.mr-trace-contact, .mr-map-button
+		display: block !important
+
+
+	.mr-mobile-linear-menu
+		position: fixed
+		top: 70px
+		left: 0
+		right: 0
+		bottom: 0
+		background: rgba(white, .95)
+		z-index: 9998
+		padding: 3%
+		font-size: 2rem
+		list-style: none
+		-webkit-transform: translateZ(0)
+
+		ul
+			list-style: none
+
+		li
+			padding: 15px 0
+
+			+ li
+				border-top: 1px solid $light-blue
+
+			a
+				display: block
+				width: 100%
+				height: 100%
+				text-decoration: none
+				color: $heavy-blue
+
+	.mr-social
+		ul
+			text-align: right
+
+			li
+				display: inline-block
+				background: $heavy-blue
+				border-radius: 100%
+				width: 40px
+				height: 40px
+				line-height: 40px
+				text-align: center
+				padding: 0
+
+				a
+					color: white
+
+
+
+	.mr-single-noticias-view .mr-social-share, .mr-single-areas-view .mr-social-share
+		width: 155px
+
+	.mr-other-news-title
+		margin-top: 40px !important
+
+	.mr-social-share ul li:nth-of-type(3)
+		background: #25d266
+		display: inline-block !important
+
+	.mr-wrap-infos-profile
+		display: inline-block !important
+		width: 100% !important
+		margin-left: 0 !important
+
+	.mr-profile-text-desktop
+		display: none !important
+
+	.mr-selecao-view
+	
+		.mr-header-img
+			height: 30vh !important
+			background-size: cover
+			background-position: -180px 0
+
+	.mr-profissionais-view
+
+		.mr-header-img
+			background-position: 52% 0
+
+
+
+@media all and(max-width: 425px)
+
+	.mr-icons-menu ul li
+		min-width: 45%
+		min-height: 136px
+		margin: 0px 5px 10px 5px
+
+
+@media all and (max-width: 320px)
+
+	.mr-noticias-view
+
+		.mr-header-img
+			background-position: -250px 0
+
+	.mr-profissionais-view
+
+		.mr-header-img
+			background-position: -330px 0
+
+
+
+@media all and (min-height: 800px)
+	
+	.mr-icons-menu
+		margin-top: 30px !important
+
+	.mr-white-trace
+		margin-top: 70px !important
+

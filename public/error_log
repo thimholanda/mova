@@ -1,0 +1,5 @@
+[19-Jun-2017 13:10:10 America/Sao_Paulo] PHP Fatal error:  Cannot access protected property laravel\pagseguro\Checkout\Information\Information::$link in /home/wwwziitbusinessc/ziit-business/app/Http/Controllers/UsersDashboardController.php on line 261
+[19-Jun-2017 13:18:48 America/Sao_Paulo] PHP Fatal error:  Call to a member function store() on null in /home/wwwziitbusinessc/ziit-business/app/Http/Controllers/UsersDashboardController.php on line 235
+[08-Aug-2017 17:31:07 America/Sao_Paulo] PHP Fatal error:  Call to a member function hasRole() on null in /home/wwwziitbusinessc/ziit-business/routes/web.php on line 50
+[08-Aug-2017 17:31:09 America/Sao_Paulo] PHP Fatal error:  Call to a member function hasRole() on null in /home/wwwziitbusinessc/ziit-business/routes/web.php on line 50
+[09-Aug-2017 12:47:36 America/Sao_Paulo] PHP Fatal error:  Call to a member function hasRole() on null in /home/wwwziitbusinessc/ziit-business/routes/web.php on line 50
