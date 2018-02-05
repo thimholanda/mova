@@ -215,7 +215,7 @@ class HomeController extends Controller
 
         if(!isset($usina_id))
         {
-            $request->session()->flash('alert-danger', 'Desculpe, não foi possível efetivar seu cadastro, pois, não existem RECs disponíveis no momento. Por favor, entre em contato pelo e-mail contato@ziitbusiness.com.br para mais informações.');
+            $request->session()->flash('alert-danger', 'Desculpe, não foi possível efetivar seu cadastro, pois, não existem RECs disponíveis no momento. Por favor, entre em contato pelo e-mail contato@movaenergia.com.br para mais informações.');
             return redirect()->back();
         }
 

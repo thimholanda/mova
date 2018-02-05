@@ -9,7 +9,7 @@
         <div class="zb-content" style="text-align: center; padding: 0 3%;">
         <h1 class="zb-regular-title">Defina sua senha</h1>
         <p class="lead">
-            Defina sua senha abaixo para começar usar <strong>Ziit Business</strong>.
+            Defina sua senha abaixo para começar usar <strong>o Mova</strong>.
         </p>
             
             <div class="zb-container-form">
